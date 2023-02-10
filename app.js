@@ -1,24 +1,26 @@
 var prompt = require('prompt-sync')();
 
-let question = prompt('Quer armazenar algo? (sim/nao) ');
+// input do usuário //
 
-const armazem = [];
+let questao = prompt('Quer armazenar algo? (sim/nao) ');
 
-while(question != "nao"){
+const armazenamento = [];
 
-    if(question == "sim"){
+while(questao != "nao"){
 
-        var propriedadeCSS = prompt('Qual é a propriedade do CSS? ')
+    if(questao == "sim"){
 
-        if(propriedadeCSS == "sair"){
+        var propriedade = prompt('Qual é a propriedade do CSS? ')
+
+        if(propriedade == "sair"){
             return;
         }
-        armazem.push(propriedadeCSS)
-        armazem.sort()
-        console.log(armazem)
+        armazenamento.push(propriedade)
+        armazenamento.sort()
+        console.log(armazenamento)
 
     } else{
-        console.log('Você escreveu (' + question + '), escreva apenas (sim/nao)!')
+        console.log('Você escreveu (' + questao + '), escreva apenas (sim/nao)!')
         break;
     }
 }
