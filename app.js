@@ -1,12 +1,12 @@
 var prompt = require('prompt-sync')();
 
-let question = prompt('Bem vindo ao armazém de propriedades do CSS, quer armazenar? (s/n) ');
+let question = prompt('Quer armazenar algo? (sim/nao) ');
 
 const armazem = [];
 
-while(question != "n"){
+while(question != "nao"){
 
-    if(question == "s"){
+    if(question == "sim"){
 
         var propriedadeCSS = prompt('Qual é a propriedade do CSS? ')
 
@@ -18,7 +18,7 @@ while(question != "n"){
         console.log(armazem)
 
     } else{
-        console.log('Você escreveu (' + question + '), escreva apenas (s/n)!')
+        console.log('Você escreveu (' + question + '), escreva apenas (sim/nao)!')
         break;
     }
 }
